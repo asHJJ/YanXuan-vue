@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no viewport-fit=cover">
+  <title>yanxuan</title>
+  <link rel="stylesheet" href="./static/css/reset.css">
+  <link rel="stylesheet" href="./static/css/swiper.css">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_974603_mw2y8fl496j.css">
+  <script src="./static/js/hotcss.js"></script>
+  <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+  <script type="text/javascript" src="js/swiper.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script>
+      //取消浏览器默认行为
+      document.addEventListener('touchstart',function(event){
+//			console.log(111111111)
+          event.preventDefault();
+      });
+      //点透
+      !(function(){
+          var aNodes = document.querySelectorAll('a');
+          for (var i=0;i<aNodes.length;i++) {
+              aNodes[i].addEventListener('touchstart',function(){
+                  window.location = this.href;
+              });
+          };
+      })();
+      //rem适配
+      !(function(){
+          var width = document.documentElement.clientWidth;
+          var styleNode = document.createElement('style');
+          styleNode.innerHTML = 'html{font-size: '+ width/10 +'px !important;}';
+          document.head.appendChild(styleNode);
+      })();
+
+      if ('addEventListener' in document) {
+          document.addEventListener('DOMContentLoaded', function() {
+              FastClick.attach(document.body);
+          }, false);
+      }
+      if(!window.Promise) {
+          document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
+      }
+  </script>
+</head>
+<body>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+
+</body>
+</html>
