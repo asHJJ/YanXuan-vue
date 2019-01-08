@@ -12,7 +12,7 @@
       </span>
       <span>分类</span>
     </span>
-        <a href="javascript:;" class="guide_item" :class="{on: $route.path==='/shiwu'}" @click="goTo('/shiwu')">
+        <a href="javascript:;" class="guide_item" :class="{on:  $route.path.includes('/shiwu')}" @click="goTo('/shiwu')">
       <span class="item_icon">
         <i class="iconfont icon-shiwutupian"></i>
       </span>

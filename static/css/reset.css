@@ -54,6 +54,15 @@ a {
   text-decoration: none;
   -webkit-backface-visibility: hidden;
 }
+a:link {
+
+  text-decoration: none;
+}
+a:hover {
+
+  text-decoration: none;
+}
+
 
 li {
   list-style: none;

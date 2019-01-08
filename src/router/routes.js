@@ -5,6 +5,7 @@
 import MSite from '../page/MSite/MSite.vue'
 import CateList from '../page/CateList/CateList.vue'
 import ShiWu from '../page/ShiWu/ShiWu.vue'
+import Tab from '../page/ShiWu/Tab.vue'
 import Cart from '../page/Cart/Cart.vue'
 import Profile from '../page/Profile/Profile.vue'
 export default [
@@ -18,7 +19,15 @@ export default [
     },
     {
         path:'/shiwu',
-        component:ShiWu
+        component:ShiWu,
+        redirect: '/shiwu/tab/0',
+        children:[
+            {
+                name:'tab',
+                path: '/shiwu/tab/:id',
+                component: Tab,
+            }
+        ]
     },
     {
         path:'/cart',
